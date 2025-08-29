@@ -1,5 +1,4 @@
 
-// Entry point for the Express API
 const express = require('express');
 const cors = require('cors');
 const app = express();
@@ -9,7 +8,7 @@ app.use(cors());
 
 app.use(express.json());
 
-// POST /bfhl endpoint
+
 app.post('/bfhl', (req, res) => {
     try {
         const { data, user_id, email, roll_number } = req.body;
@@ -17,12 +16,12 @@ app.post('/bfhl', (req, res) => {
             return res.status(400).json({ is_success: false, message: 'Invalid input format' });
         }
 
-        // Use provided user details or fallback to defaults
-        const userId = user_id || "priyanshu_gupta_29082025";
-        const userEmail = email || "priyanshu.gupta2021@vitbhopal.ac.in";
-        const userRoll = roll_number || "21BCE10520";
+        
+        const userId = user_id || "abhinay_manikanti";
+        const userEmail = email || "abhinay.22bce9726@vitapstudent.ac.in";
+        const userRoll = roll_number || "22BCE9726";
 
-        // Classification arrays
+        
         const odd_numbers = [];
         const even_numbers = [];
         const alphabets = [];
@@ -32,7 +31,7 @@ app.post('/bfhl', (req, res) => {
 
         data.forEach(item => {
             if (/^\d+$/.test(item)) {
-                // Numeric string
+               
                 const num = parseInt(item, 10);
                 sum += num;
                 if (num % 2 === 0) {
