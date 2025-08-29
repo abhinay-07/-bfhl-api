@@ -97,7 +97,7 @@
 <body>
     <div class="container">
         <h2>BFHL API Tester</h2>
-        <div class="api-label">POST to <b>http://localhost:3000/bfhl</b></div>
+        <div class="api-label">POST to <b>https://bfhl-api-9yu9.onrender.com</b></div>
         <form id="bfhlForm">
             <label for="userIdInput">User ID (e.g. john_doe_17091999):</label>
             <input id="userIdInput" type="text" placeholder="eg:abhinay_manikanti" style="width:100%;margin-bottom:12px;padding:8px;border-radius:6px;border:1.5px solid #bfc9d9;font-size:1rem;">
@@ -135,7 +135,7 @@
             const email = emailInput.value.trim();
             const roll_number = rollInput.value.trim();
             try {
-                const res = await fetch('http://localhost:3000/bfhl', {
+                const res = await fetch('https://bfhl-api-9yu9.onrender.com/bfhl', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ data: arr, user_id, email, roll_number })
